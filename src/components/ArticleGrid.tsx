@@ -24,7 +24,7 @@ const ArticleGrid: React.FC<ArticleGridProps> = ({ articles, category }) => {
   }, [articles, category]);
 
   return (
-    <section className="w-full py-8 md:py-12 ">
+    <section className="w-full py-8 md:py-9 ">
       <div
         className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-700 ease-in-out ${
           animating

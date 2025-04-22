@@ -33,7 +33,7 @@ const AuthorArticles: React.FC<AuthorArticlesProps> = ({ articles, authorId }) =
   return (
     <div>
       {/* Tab Section with Animated Hover and Active State */}
-      <div className="border-b border-gray-200 mb-6">
+      <div className="border-b border-gray-200">
         <div className="flex space-x-6">
           <button
             onClick={() => setActiveTab("all")}
@@ -55,11 +55,8 @@ const AuthorArticles: React.FC<AuthorArticlesProps> = ({ articles, authorId }) =
           </button>
         </div>
       </div>
-
       {/* Display Articles */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"> */}
         <ArticleGrid articles={filteredArticles} />
-      {/* </div> */}
     </div>
   )
 }

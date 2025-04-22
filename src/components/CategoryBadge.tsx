@@ -23,7 +23,7 @@ const CategoryBadge: React.FC<CategoryBadgeProps> = ({ category }) => {
 
   return (
     <Link
-      to={`/blog/?category=${category.toLowerCase()}`}
+      to={`?category=${category.toLowerCase()}`}
       className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${getColor()}`}
     >
       {category}
