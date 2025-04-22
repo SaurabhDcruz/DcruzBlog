@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 220, 90%, 60%; /* RGB value for primary color */
+  --primary-foreground: 255, 255%, 255%; /* Define a foreground color for text */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .tab {
+    @apply px-4 py-2 text-sm font-medium transition-colors duration-200 hover:text-primary;
+  }
+
+  .tab.active {
+    @apply text-primary border-b-2 border-primary;
+  }
+
+  .article-grid {
+    @apply grid gap-6 transition-all duration-300;
+  }
+
+  .article-enter {
+    @apply opacity-0 scale-95;
+  }
+
+  .article-enter-active {
+    @apply opacity-100 scale-100 transition-all duration-300;
+  }
+
+  .article-exit {
+    @apply opacity-100 scale-100;
+  }
+
+  .article-exit-active {
+    @apply opacity-0 scale-95 transition-all duration-300;
+  }
+}
